@@ -1,7 +1,7 @@
 class Product {
   final int? id;
   final String title;
-  final String price;
+  final double price;
   final String description;
   final String image;
   final String category;
@@ -18,7 +18,7 @@ class Product {
     return Product(
       id: json['id'],
       title: json['title'],
-      price: json['price'],
+      price: json['price'].toDouble(),
       description: json['description'],
       image: json['image'],
       category: json['category'],

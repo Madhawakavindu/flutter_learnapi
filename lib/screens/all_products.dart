@@ -40,7 +40,16 @@ class _AllProductsState extends State<AllProducts> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[200],
                     ),
-                    child: ListTile(title: Text(product.title)),
+                    child: ListTile(
+                      title: Text(product.title),
+                      subtitle: Text("\$${product.price}"),
+                      leading: Image.network(
+                        product.image,
+                        height: 100,
+                        width: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   );
                 },
               );
